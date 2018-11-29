@@ -25,6 +25,7 @@ public class RedisConfiguration {
             URI redisUrl = new URI(redisUrlEnvironmentVariable);
             redisStandaloneConfiguration.setHostName(redisUrl.getHost());
             redisStandaloneConfiguration.setPort(redisUrl.getPort());
+            redisStandaloneConfiguration.setPassword(redisUrl.getUserInfo().split(":")[1]);
         }
         return new JedisConnectionFactory(redisStandaloneConfiguration);
     }
