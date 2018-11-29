@@ -29,5 +29,8 @@ targetCompatibility = 1.8
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.data:spring-data-redis')
+    implementation('org.apache.commons:commons-pool2')
+    implementation('redis.clients:jedis')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
