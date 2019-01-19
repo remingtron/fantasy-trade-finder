@@ -12,5 +12,10 @@ buildscript {
 apply plugin: 'com.moowork.node'
 
 node {
+    version = '11.6.0'
+    npmVersion = '6.5.0'
+    yarnVersion = '1.13.0'
     download = true
 }
+
+yarn_build.dependsOn(yarn_install)
