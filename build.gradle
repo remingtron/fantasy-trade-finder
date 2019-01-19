@@ -18,7 +18,13 @@ apply plugin: 'io.spring.dependency-management'
 bootJar {
     baseName = 'fantasy-trade-finder'
     version =  '0.1.0'
+
+    from('app/build') {
+        into 'static'
+    }
 }
+
+bootJar.dependsOn(':app:yarn_build')
 
 repositories {
     mavenCentral()

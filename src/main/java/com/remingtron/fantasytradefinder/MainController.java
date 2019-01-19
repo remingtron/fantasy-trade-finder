@@ -21,7 +21,7 @@ public class MainController {
     @Autowired
     PlayerRepository playerRepository;
 
-    @RequestMapping("/")
+    @RequestMapping("/main")
     public String index() {
         Player dummyPlayer = new Player();
         dummyPlayer.firstName = "Bob";
